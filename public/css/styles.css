@@ -27,6 +27,7 @@ p{
     margin: auto;
     overflow: hidden;
     padding: var(--paddingsecciones); 
+    justify-content: space-between;
 }
 
 /*Menu*/
@@ -42,13 +43,18 @@ p{
 
 .logo{
     height: 140px;
+    position: relative;
+    left: 20px
 }
 
 .logo img{
     display: block;
     height: 100%;
 }
-
+.enlaces{
+    position: relative;
+    right: 20px;
+}
 .enlaces li{
     list-style: none;
     display: inline-block;
@@ -90,13 +96,78 @@ p{
     font-weight: 400;
     color: #ebebeb;
 }
+/* Search-Bar*/
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+    position: relative;
+    left: 0%;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 0;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .topnav input[type=text] {
+    width: 100%;
+    float: right;
+    padding: 0px;
+    border: none;
+    margin-top: 0px;
+    margin-right: 0px;
+    font-size: 17px;
+    width: 500px;
+    height: 30px;
+  }
+
+/* Menu Desplegable */
+
+.menuCSS3 ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 100%;
+}
+.menuCSS3 a {
+    display: block;
+    padding: 2em;
+    background-color: #F9B53C;
+    text-decoration: none;
+    color: #191C26;
+}
+.menuCSS3 a:hover {
+    background-color: #CC673B;
+}
+.menuCSS3 ul li ul {
+    display: none;
+}
+.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
+    display: block;
+}
 
 /* Slider */
 
 .slider-frame {
-    width: 900px;
-    height: 900px;
-    margin: 50px auto 0;
+    width: 100%;
+    height: 400px;
+    margin: 0px auto 0;
     overflow: hidden;
 }
 
@@ -130,4 +201,136 @@ p{
 	
 	75% {margin-left: -300%;}
 	100% {margin-left: -300%;}
+}
+
+
+/* Main */
+
+.last-visit{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+main section h3{
+    margin: 20px 0px;
+}
+
+article div.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative;
+    padding: 15px;
+}
+
+/* Footer */
+
+.footer-container{
+    height: 300px;
+    background-color: grey;
+}
+
+@media (min-width: 361px){
+    main section article .description{
+        display: block;
+    }
+
+    main section article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    main section div.products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    main section div.products article{
+        width: 45%;
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+    }
+}
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+
+    main section article i {
+        transition: transform 0.5s;
+    }
+
+    article:hover i {
+        transform: rotate (-90deg);
+    }
 }
