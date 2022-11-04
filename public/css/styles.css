@@ -138,28 +138,41 @@ p{
 
 /* Menu Desplegable */
 
-.menuCSS3 ul {
+.menu-desplegable ul {
     display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
     width: 100%;
+    position: absolute;
+    z-index: 2;
 }
-.menuCSS3 a {
+.menu-desplegable li {
+    display:  inline-block;
+    width:25%;  
+}
+
+.menu-desplegable a {
     display: block;
     padding: 2em;
     background-color: #F9B53C;
     text-decoration: none;
     color: #191C26;
 }
-.menuCSS3 a:hover {
+.menu-desplegable a:hover {
     background-color: #CC673B;
+    z-index: 2;
 }
-.menuCSS3 ul li ul {
+.menu-desplegable ul li ul {
     display: none;
 }
-.menuCSS3 ul li a:hover + ul, .menuCSS3 ul li ul:hover {
-    display: block;
+
+.menu-desplegable ul li a:hover + ul, .menu-desplegable ul li ul:hover {
+    display: flex ;
+    flex-direction: column;
+    width: 100%;
+    z-index: 2;
+    
 }
 
 /* Slider */
