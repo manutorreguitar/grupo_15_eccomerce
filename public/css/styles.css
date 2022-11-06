@@ -15,10 +15,10 @@
 }
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ebebeb;
+    background-image: url(/images/fondologin.png);
 }
 
-p{
+p {
     font-size: 12px;
 }
 
@@ -30,78 +30,36 @@ p{
     justify-content: space-between;
 }
 
-/*Menu*/
+/*Header*/
 
 .top-header{
-    padding: 0;
     display: flex;  
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     height: 140px;
-    background-image: url(/images/fondologin.png)
+    background-image: url(/images/fondologin.png);
+    padding: 10px;
+    
 }
 
 .logo{
-    height: 140px;
+    height: 100px;
     position: relative;
-    left: 20px
+    margin-left:auto;
 }
 
 .logo img{
     display: block;
     height: 100%;
 }
-.enlaces{
-    position: relative;
-    right: 20px;
-}
-.enlaces li{
-    list-style: none;
-    display: inline-block;
-}
 
-.enlaces a{
-    text-decoration: none;
-    color: whitesmoke;
-    padding-left: 10px;
-}
-
-/* Hero */
-
-.hero{
-    height: 300px;
-    background-image: url("/images/hero.png");
-    background-position: center;
-    background-size: cover;
-
-}
-
-.text-container{
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero h1{
-    font-size: 36px;
-    font-weight: 700; 
-    color: #ebebeb;
-}
-
-.hero p{
-    font-size: 20px;
-    font-weight: 400;
-    color: #ebebeb;
-}
 /* Search-Bar*/
 .topnav {
     overflow: hidden;
     background-color: #e9e9e9;
     position: relative;
-    left: 0%;
+    margin: auto;
   }
   
   .topnav a {
@@ -132,11 +90,32 @@ p{
     margin-top: 0px;
     margin-right: 0px;
     font-size: 17px;
-    width: 500px;
+    width: 150px;
     height: 30px;
   }
 
+.enlaces{
+    position: relative;
+    margin-right: auto;
+}
+.enlaces li{
+    list-style: none;
+    display: inline-block;
+}
+
+.enlaces a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding-left: 10px;
+}
+
 /* Menu Desplegable */
+
+.menu-desplegable{
+    padding-left: 0;
+    padding-right: 0; 
+    width: 100%;
+}
 
 .menu-desplegable ul {
     display: flex;
@@ -148,13 +127,14 @@ p{
     z-index: 2;
 }
 .menu-desplegable li {
-    display:  inline-block;
-    width:25%;  
+    display: inline-block;
+    width:20%;  
 }
 
 .menu-desplegable a {
+    font-size: 10px;
     display: block;
-    padding: 2em;
+    padding: 1em;
     background-color: #F9B53C;
     text-decoration: none;
     color: #191C26;
@@ -172,14 +152,12 @@ p{
     flex-direction: column;
     width: 100%;
     z-index: 2;
-    
 }
 
 /* Slider */
 
 .slider-frame {
     width: 100%;
-    height: 400px;
     margin: 0px auto 0;
     overflow: hidden;
 }
@@ -188,7 +166,6 @@ p{
 	display: flex;
 	padding: 0;
 	width: 400%;
-	
 	animation: slide 20s infinite alternate ease-in-out;
 }
 
@@ -198,7 +175,6 @@ p{
 }
 
 .slider-frame img {
-    
 	width: 100%;
 }
 
@@ -216,12 +192,13 @@ p{
 	100% {margin-left: -300%;}
 }
 
-
 /* Main */
-
+ 
 .last-visit{
     display: flex;
     flex-wrap: nowrap;
+    background-image: url(/images/fondologin.png);
+    width: 100%;
 }
 
 .price{
@@ -302,10 +279,12 @@ article div.main-article{
 
 /* Footer */
 
-.footer-container{
-    height: 300px;
-    background-color: grey;
-}
+footer {
+    background: #111;
+    color: #fff;
+
+  }
+
 
 /*Login* y Register*/
 
@@ -321,8 +300,7 @@ article div.main-article{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0px auto;
-    
+    margin: 0px auto; 
 }
 
 .login-top-container{
@@ -547,4 +525,25 @@ article div.main-article{
     article:hover i {
         transform: rotate (-90deg);
     }
+}
+
+/* product */
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px solid white;
+}
+
+.product-img{
+    margin: auto;
+}
+.product-img img{
+    max-height: 150px;
+}
+
+.product-description p{
+    font-size: 30px;
+    color: white;
+    
 }
