@@ -533,17 +533,32 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 10px solid white;
+    justify-content: center;
 }
 
 .product-img{
     margin: auto;
 }
 .product-img img{
-    max-height: 150px;
+    display: flex;
+    justify-content: center;
+    max-height: 400px;
+    margin-top: 200px;
 }
 
 .product-description p{
     font-size: 30px;
     color: white;
+    text-align: center;
     
+}
+.eliminar-editar{
+    background-color: white;
+    font-weight: 400px;
+    color: #111;
+    text-align: center;
+}
+
+.p {
+    font-size: 28px;
 }
