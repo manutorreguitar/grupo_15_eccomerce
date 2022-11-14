@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 app.use(express.static('public'));
 
-let PORT = process.env.PORT || 3000
+let PORT = process.env.PORT || 3001
 
 app.listen(PORT, ()=>{
-    console.log('Funcionando en el Puerto ' + '');
+    console.log('Funcionando en el Puerto ' + PORT);
 });
 
 app.get('/', (req,res)=>{
