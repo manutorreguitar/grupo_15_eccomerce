@@ -1,25 +1,12 @@
-const express = require('express');
-const app = express();
-app.use(express.static('public'));
+const express = require ('express');
+const app= express();
+const path = require ('path');
+const mainRouter = require('./routers/mainRouter');
 
-let PORT = process.env.PORT || 3001
-
-app.listen(PORT, ()=>{
-    console.log('Funcionando en el Puerto ' + PORT);
+app.listen (3000, ()=>{
+    console.log('Server Ok')
 });
 
-app.get('/', (req,res)=>{
-    res.sendFile(__dirname + '/views/home.html');
-});
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.get('/login', (req,res)=>{
-    res.sendFile(__dirname + '/views/login.html');
-});
-
-app.get('/register', (req,res)=>{
-    res.sendFile(__dirname + '/views/register.html');
-});
-
-app.get('/product', (req,res)=>{
-    res.sendFile(__dirname + '/views/product.html');
-});
+app.use(mainRouter);
